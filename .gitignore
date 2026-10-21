@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+data/
+dist/
+roku/config.json
+*.pyc
+
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

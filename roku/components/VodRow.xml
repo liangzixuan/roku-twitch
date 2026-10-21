@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="VodRow" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="onContent" />
+    <field id="focusPercent" type="float" onChange="onFocus" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/VodRow.brs" />
+  <children>
+    <Rectangle id="highlight" width="700" height="66" color="0x593391FF" opacity="0" />
+    <Label id="title" translation="[12,2]" width="676" height="32" font="font:MediumSystemFont" />
+    <Label id="detail" translation="[12,33]" width="676" height="25" font="font:SmallSystemFont" color="0xBEB6CAFF" />
+    <Group id="progress" translation="[12,61]" visible="false">
+      <Rectangle width="676" height="3" color="0x625A70FF" />
+      <Rectangle id="fill" width="0" height="3" color="0xBF94FFFF" />
+    </Group>
+  </children>
+</component>

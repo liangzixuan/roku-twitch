@@ -1,0 +1,8 @@
+title=Personal Twitch
+major_version=0
+minor_version=10
+build_version=0
+ui_resolutions=hd
+mm_icon_focus_fhd=pkg:/images/twitch-fhd.png
+mm_icon_focus_hd=pkg:/images/twitch-hd.png
+mm_icon_focus_sd=pkg:/images/twitch-sd.png

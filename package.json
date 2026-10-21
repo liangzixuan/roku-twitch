@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "brighterscript": "0.73.7",
+    "brs": "0.45.0"
+  },
+  "scripts": {
+    "check:roku": "bsc --project bsconfig.json",
+    "test:roku": "node tests/run-vod-controls.cjs && node tests/run-following.cjs && node tests/run-library.cjs && node tests/run-api-errors.cjs && node tests/run-browse-quality.cjs && node tests/run-recovery-time.cjs"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rootDir": "roku",
+  "files": [
+    "manifest",
+    "source/**/*",
+    "components/**/*",
+    "images/**/*"
+  ],
+  "createPackage": false,
+  "copyToStaging": false,
+  "diagnosticFilters": []
+}

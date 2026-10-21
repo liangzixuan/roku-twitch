@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="FollowRow" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="onContent" />
+    <field id="focusPercent" type="float" onChange="onFocus" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/FollowRow.brs" />
+  <children>
+    <Rectangle id="highlight" width="700" height="66" color="0x593391FF" opacity="0" />
+    <Rectangle translation="[8,7]" width="52" height="52" color="0x382A4FFF" />
+    <Label id="initial" translation="[8,7]" width="52" height="52" horizAlign="center" vertAlign="center" />
+    <Poster id="avatar" translation="[8,7]" width="52" height="52" loadDisplayMode="scaleToFit" />
+    <Label id="name" translation="[76,4]" width="610" height="33" font="font:MediumSystemFont" />
+    <Label id="state" translation="[76,36]" width="610" height="27" font="font:SmallSystemFont" color="0xBEB6CAFF" />
+  </children>
+</component>

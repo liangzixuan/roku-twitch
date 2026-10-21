@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainScene" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+  <script type="text/brightscript" uri="pkg:/components/VodControls.brs" />
+  <script type="text/brightscript" uri="pkg:/components/Following.brs" />
+  <script type="text/brightscript" uri="pkg:/components/Library.brs" />
+  <script type="text/brightscript" uri="pkg:/components/Browse.brs" />
+  <script type="text/brightscript" uri="pkg:/components/Quality.brs" />
+  <script type="text/brightscript" uri="pkg:/components/TimeJump.brs" />
+  <script type="text/brightscript" uri="pkg:/components/Recovery.brs" />
+  <children>
+    <Label id="heading" translation="[60,30]" width="1160" height="55" text="Following" font="font:LargeBoldSystemFont" />
+    <Label id="serverAddress" translation="[60,90]" width="1160" height="35" font="font:SmallSystemFont" />
+    <Label id="status" translation="[60,140]" width="1160" height="175" wrap="true" text="Connecting to the computer or NAS..." />
+    <LabelList id="menu" translation="[60,325]" itemSize="[1100,42]" numRows="7" />
+    <Label id="footer" translation="[60,650]" width="1160" height="45" text="* Settings" font="font:SmallSystemFont" />
+    <MarkupList id="vodList" translation="[60,220]" itemSize="[700,68]" numRows="6" itemComponentName="VodRow" drawFocusFeedback="false" visible="false" />
+    <Group id="vodDetails" translation="[800,220]" visible="false">
+      <Rectangle width="420" height="408" color="0x241B33FF" />
+      <Label id="vodCoverFallback" translation="[18,12]" width="384" height="180" horizAlign="center" vertAlign="center" font="font:SmallSystemFont" />
+      <Poster id="vodThumbnail" translation="[18,12]" width="384" height="180" loadDisplayMode="scaleToFit" />
+      <Label id="vodDetailsMeta" translation="[18,200]" width="384" height="30" font="font:SmallSystemFont" color="0xC7A4FFFF" />
+      <ScrollableText id="vodDetailsTitle" translation="[18,238]" width="384" height="128" lineSpacing="2" font="font:SmallSystemFont" />
+      <Label translation="[18,374]" width="384" height="28" text="Right: Read title  |  Left: List" font="font:SmallSystemFont" />
+    </Group>
+    <LabelList id="searchList" translation="[60,220]" itemSize="[1100,50]" numRows="8" visible="false" />
+    <MarkupList id="followList" translation="[60,220]" itemSize="[700,68]" numRows="6" itemComponentName="FollowRow" drawFocusFeedback="false" visible="false" />
+    <Group id="followDetails" translation="[800,220]" visible="false">
+      <Rectangle width="420" height="408" color="0x241B33FF" />
+      <Rectangle translation="[18,18]" width="96" height="96" color="0x382A4FFF" />
+      <Label id="detailInitial" translation="[18,18]" width="96" height="96" horizAlign="center" vertAlign="center" font="font:LargeBoldSystemFont" />
+      <Poster id="detailAvatar" translation="[18,18]" width="96" height="96" loadDisplayMode="scaleToFit" />
+      <Label id="detailName" translation="[130,18]" width="272" height="65" wrap="true" font="font:MediumBoldSystemFont" />
+      <Label id="detailState" translation="[130,84]" width="272" height="35" font="font:SmallSystemFont" color="0xC7A4FFFF" />
+      <Label id="detailGame" translation="[18,135]" width="384" height="58" wrap="true" font="font:SmallBoldSystemFont" color="0xC7A4FFFF" />
+      <Label id="detailTitle" translation="[18,201]" width="384" height="120" wrap="true" font="font:MediumSystemFont" />
+      <Label id="detailHint" translation="[18,335]" width="384" height="64" wrap="true" font="font:SmallSystemFont" color="0xBEB6CAFF" />
+    </Group>
+    <Timer id="followRefresh" duration="60" repeat="true" />
+    <Timer id="heartbeat" duration="15" repeat="true" />
+    <Timer id="timer" duration="5" repeat="false" />
+    <Timer id="seekTimer" duration="0.4" repeat="true" />
+    <Timer id="hudTimer" duration="4" repeat="false" />
+    <Timer id="stallTimer" duration="30" repeat="false" />
+    <Timer id="stableTimer" duration="60" repeat="false" />
+    <Video id="video" width="1280" height="720" visible="false" />
+    <Group id="vodInput">
+      <Group id="vodHud" translation="[60,570]" visible="false">
+        <Rectangle width="1160" height="110" color="0x171323ED" />
+        <Poster id="playIcon" translation="[25,14]" width="48" height="48" uri="pkg:/images/play.png" visible="false" />
+        <Group id="pauseIcon" translation="[37,23]">
+          <Rectangle width="8" height="30" color="0xFFFFFFFF" />
+          <Rectangle translation="[15,0]" width="8" height="30" color="0xFFFFFFFF" />
+        </Group>
+        <Label id="vodTime" translation="[95,18]" width="1025" height="40" />
+        <Rectangle translation="[40,80]" width="1080" height="8" color="0x625A70FF" />
+        <Rectangle id="vodFill" translation="[40,80]" width="0" height="8" color="0xBF94FFFF" />
+      </Group>
+    </Group>
+    <Group id="qualityPanel" translation="[380,100]" visible="false">
+      <Rectangle width="520" height="510" color="0x241B33FF" />
+      <Label translation="[25,15]" width="470" height="40" text="Playback options" font="font:MediumBoldSystemFont" />
+      <Label id="qualityStatus" translation="[25,60]" width="470" height="60" wrap="true" font="font:SmallSystemFont" />
+      <LabelList id="qualityList" translation="[25,135]" itemSize="[470,40]" numRows="8" />
+      <Label translation="[25,465]" width="470" height="30" text="Back: Close" font="font:SmallSystemFont" />
+    </Group>
+  </children>
+</component>
