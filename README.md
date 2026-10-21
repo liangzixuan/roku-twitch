@@ -43,7 +43,7 @@ Linux/NAS 使用系统提供的 FFmpeg 安装方式。先执行 `ffmpeg -version
 
 ## 迁移到 Windows 11
 
-Windows 迁移步骤见 [WINDOWS.md](WINDOWS.md)。运行包包含安装依赖、配置地址和启动服务的三个 `.cmd` 脚本。使用 Python 3.12 与 FFmpeg，不需要 Docker。账号和记录在停止旧服务后单独复制；运行包不包含私人数据。Windows 安装和播放仍需在目标电脑验证。
+Windows 迁移步骤见 [WINDOWS.md](WINDOWS.md)。运行包包含安装依赖、配置地址和启动服务的三个 `.cmd` 脚本。使用 Python 3.14 与 FFmpeg，不需要 Docker。账号和记录在停止旧服务后单独复制；运行包不包含私人数据。Windows 安装和播放仍需在目标电脑验证。
 
 ## 首次配置
 
