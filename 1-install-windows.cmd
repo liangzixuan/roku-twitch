@@ -2,11 +2,11 @@
 setlocal
 set "PYTHONUTF8=1"
 cd /d "%~dp0"
-py -3.12 --version >nul 2>&1
+py -3.14 --version >nul 2>&1
 if errorlevel 1 goto missing_python
 if exist ".venv\Scripts\python.exe" goto install_packages
 if exist ".venv" goto wrong_venv
-py -3.12 -m venv .venv
+py -3.14 -m venv .venv
 if errorlevel 1 goto failed
 :install_packages
 ".venv\Scripts\python.exe" -m pip install -r requirements.txt
@@ -19,7 +19,7 @@ echo Installation complete. Follow WINDOWS.md to transfer data and configure the
 pause
 exit /b 0
 :missing_python
-echo Install Python 3.12 first. See WINDOWS.md. Then reopen this script.
+echo Install Python 3.14 first. See WINDOWS.md. Then reopen this script.
 pause
 exit /b 1
 :wrong_venv
